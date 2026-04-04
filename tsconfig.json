@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@/*": ["./*"],
+      "@yume-chan/adb": ["./lib/yume-chan/adb/index.ts"],
+      "@yume-chan/adb-scrcpy": ["./lib/yume-chan/adb-scrcpy/index.ts"],
+      "@yume-chan/adb-daemon-webusb": ["./lib/yume-chan/adb-daemon-webusb/index.ts"],
+      "@yume-chan/scrcpy": ["./lib/yume-chan/scrcpy/index.ts"],
+      "@yume-chan/android-bin": ["./lib/yume-chan/android-bin/index.ts"],
+      "@yume-chan/adb-credential-web": ["./lib/yume-chan/adb-credential-web/index.ts"],
+      "@yume-chan/stream-extra": ["./lib/yume-chan/stream-extra/index.ts"],
+      "@yume-chan/struct": ["./lib/yume-chan/struct/index.ts"],
+      "@yume-chan/event": ["./lib/yume-chan/event/index.ts"]
+    }
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "exclude": ["node_modules"]
+}
