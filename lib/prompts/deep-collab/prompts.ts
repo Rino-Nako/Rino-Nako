@@ -1,9 +1,9 @@
-import { SYSTEM_PROMPT } from '@/lib/prompts';
+import { SYSTEM_PROMPT } from '@/lib/prompts/prompts';
 import {
   EXECUTOR_CAPABILITIES,
   EXECUTOR_PROMPT_TEMPLATES,
   PLANNER_PROMPT_TEMPLATES,
-} from '@/lib/deep-collab/prompt-templates';
+} from '@/lib/prompts/deep-collab/prompt-templates';
 
 export type ModelConfig = {
   model: string;

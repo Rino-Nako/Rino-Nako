@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState, useCallback } from 'react';
-import { WebADB } from '@/lib/adb';
+import { WebADB } from '@/lib/device/adb';
 import { AdbScrcpyClient } from '@yume-chan/adb-scrcpy';
 import {
   WebCodecsVideoDecoder,

@@ -1,10 +1,10 @@
 import { useCallback, useRef, useState, type RefObject } from 'react';
-import { MessageBuilder } from '@/lib/message-builder';
-import { getScreenshotFromCanvas, stripBase64Prefix } from '@/lib/screenshot-utils';
-import { parseModelResponse } from '@/lib/response-parser';
-import { extractActionParams } from '@/lib/action-extractor';
-import { InputManager, installAdbKeyboard } from '@/lib/input-manager';
-import { DeviceController } from '@/lib/device-control';
+import { MessageBuilder } from '@/lib/agent/message-builder';
+import { getScreenshotFromCanvas, stripBase64Prefix } from '@/lib/agent/screenshot-utils';
+import { parseModelResponse } from '@/lib/agent/response-parser';
+import { extractActionParams } from '@/lib/agent/action-extractor';
+import { InputManager, installAdbKeyboard } from '@/lib/device/input-manager';
+import { DeviceController } from '@/lib/device/device-control';
 import { Adb } from '@yume-chan/adb';
 import { GoogleGenAI } from '@google/genai';
 import {
@@ -14,8 +14,8 @@ import {
   AndroidMotionEventAction,
   AndroidMotionEventButton,
 } from '@yume-chan/scrcpy';
-import { AgentAction, mapCoordinates } from '@/lib/agent-core';
-import { EXECUTOR_PROMPTS, PLANNER_PROMPTS, fillTemplate } from '@/lib/deep-collab/prompts';
+import { AgentAction, mapCoordinates } from '@/lib/agent/agent-core';
+import { EXECUTOR_PROMPTS, PLANNER_PROMPTS, fillTemplate } from '@/lib/prompts/deep-collab/prompts';
 
 type ScrcpyController = {
   injectTouch: (args: any) => Promise<void>;

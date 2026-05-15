@@ -73,9 +73,21 @@ web-client/
 │   ├── api/chat/        # 聊天代理 route
 │   ├── layout.tsx
 │   └── page.tsx         # 主界面与状态聚合
-├── components/          # UI 组件（聊天、设备、侧栏、设置等）
+├── components/          # UI 组件
+│   ├── chat/            # 聊天面板、步骤与动作展示
+│   ├── common/          # 通用弹窗等共享组件
+│   ├── device/          # 设备面板与应用列表
+│   ├── layout/          # 侧边栏等布局组件
+│   └── settings/        # 设置、欢迎与头像裁剪
 ├── hooks/               # useAgentLoop、useScrcpy、会话等逻辑
-├── lib/                 # 提示词、ADB/解析、配置等
+├── lib/                 # 业务能力模块
+│   ├── agent/           # Agent 动作、消息、响应解析与截图工具
+│   ├── device/          # ADB、输入法与设备控制
+│   ├── model/           # 模型响应流解析
+│   ├── prompts/         # 普通/独立/Deep Collab 提示词
+│   ├── som/             # SoM XML 解析与渲染
+│   └── utils/           # Cookie 等通用工具
+├── vendor/              # 本地第三方源码映射（@yume-chan/*）
 ├── types/               # TypeScript 类型
 └── config/              # 应用文案与列表等静态配置
 ```

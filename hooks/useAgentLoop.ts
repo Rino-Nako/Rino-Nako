@@ -1,6 +1,6 @@
 import { useCallback, useRef, useState, type RefObject } from 'react';
-import { InputManager, installAdbKeyboard } from '@/lib/input-manager';
-import { DeviceController } from '@/lib/device-control';
+import { InputManager, installAdbKeyboard } from '@/lib/device/input-manager';
+import { DeviceController } from '@/lib/device/device-control';
 import { Adb } from '@yume-chan/adb';
 import { GoogleGenAI } from '@google/genai';
 import {
@@ -10,16 +10,16 @@ import {
   AndroidMotionEventAction,
   AndroidMotionEventButton,
 } from '@yume-chan/scrcpy';
-import { AgentAction, mapCoordinates } from '@/lib/agent-core';
-import { compressBase64Image, getScreenshotFromCanvas, stripBase64Prefix } from '@/lib/screenshot-utils';
-import { MessageBuilder } from '@/lib/message-builder';
-import { parseModelResponse } from '@/lib/response-parser';
-import { extractActionParams } from '@/lib/action-extractor';
+import { AgentAction, mapCoordinates } from '@/lib/agent/agent-core';
+import { compressBase64Image, getScreenshotFromCanvas, stripBase64Prefix } from '@/lib/agent/screenshot-utils';
+import { MessageBuilder } from '@/lib/agent/message-builder';
+import { parseModelResponse } from '@/lib/agent/response-parser';
+import { extractActionParams } from '@/lib/agent/action-extractor';
 import { ChatMessage } from '@/types/agent';
-import { getSystemPrompt } from '@/lib/prompts';
+import { getSystemPrompt } from '@/lib/prompts/prompts';
 import { UIElement, getInteractableElements } from '@/lib/som/xml-parser';
 import { drawSoMComposite, drawSoMOverlayMask } from '@/lib/som/som-renderer';
-import { parseSSE } from '@/lib/sse-parser';
+import { parseSSE } from '@/lib/model/sse-parser';
 
 type ScrcpyController = {
   injectTouch: (args: any) => Promise<void>;

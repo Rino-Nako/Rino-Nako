@@ -4,7 +4,7 @@ import { Smartphone, Grid, Bug } from 'lucide-react';
 import { Message } from '@/types';
 import { Adb } from '@yume-chan/adb';
 import AppList from './AppList';
-import RawDataModal from './RawDataModal';
+import RawDataModal from '../common/RawDataModal';
 
 interface DevicePanelProps {
   isConnected: boolean;

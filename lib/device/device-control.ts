@@ -1,5 +1,5 @@
 import { Adb } from "@yume-chan/adb";
-import { findPackageName } from "../config/app-list";
+import { findPackageName } from "@/config/app-list";
 
 export class DeviceController {
   private device: Adb;

@@ -1,17 +1,17 @@
 'use client';
 
 import React, { useState, useEffect, useCallback } from 'react';
-import ChatPanel from '@/components/ChatPanel';
-import DevicePanel from '@/components/DevicePanel';
-import Sidebar from '@/components/Sidebar';
-import WelcomeModal from '@/components/WelcomeModal';
+import ChatPanel from '@/components/chat/ChatPanel';
+import DevicePanel from '@/components/device/DevicePanel';
+import Sidebar from '@/components/layout/Sidebar';
+import WelcomeModal from '@/components/settings/WelcomeModal';
 import { Message } from '@/types';
-import { TaskStep } from '@/components/TaskStatus';
+import { TaskStep } from '@/components/chat/TaskStatus';
 import { useScrcpy } from '@/hooks/useScrcpy';
 import { useAgentLoop } from '@/hooks/useAgentLoop';
 import { useDeepCollabLoop } from '@/hooks/useDeepCollabLoop';
 import { useChatSessions } from '@/hooks/useChatSessions';
-import { getCookie, setCookie } from '@/lib/cookie';
+import { getCookie, setCookie } from '@/lib/utils/cookie';
 import { getInteractableElementsWithDebug } from '@/lib/som/xml-parser';
 import { drawSoMOverlayMask } from '@/lib/som/som-renderer';
 

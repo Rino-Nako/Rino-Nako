@@ -2,8 +2,8 @@ import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import Image from 'next/image';
 import { ChevronRight, Zap, RefreshCw, Loader2 } from 'lucide-react';
 import { Adb } from '@yume-chan/adb';
-import { DeviceController } from '@/lib/device-control';
-import { APP_PACKAGES } from '../config/app-list';
+import { DeviceController } from '@/lib/device/device-control';
+import { APP_PACKAGES } from '@/config/app-list';
 
 /**
  * AppCard 组件

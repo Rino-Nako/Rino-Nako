@@ -1,4 +1,4 @@
-import { SYSTEM_PROMPT } from './prompts';
+import { SYSTEM_PROMPT } from '@/lib/prompts/prompts';
 
 export type AgentActionType =
   | 'launch'

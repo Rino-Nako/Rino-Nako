@@ -26,9 +26,9 @@ import {
   Beaker
 } from 'lucide-react';
 import { Adb } from '@yume-chan/adb';
-import { installAdbKeyboard } from '@/lib/input-manager';
+import { installAdbKeyboard } from '@/lib/device/input-manager';
 import { ABOUT_CONFIG } from '@/config/about';
-import { HIDEEX_FUNCTION, HIDE_BETAFUN, HIDE_CLOUDSYNC } from '@/lib/config';
+import { HIDEEX_FUNCTION, HIDE_BETAFUN, HIDE_CLOUDSYNC } from '@/config/feature-flags';
 import ImageCropper from './ImageCropper';
 import { useTheme } from '@/context/ThemeContext';
 
